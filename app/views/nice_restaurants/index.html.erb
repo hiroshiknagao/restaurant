@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Nice Restaurants</h2>
+  <div class="cards">
+    <%  @nice_restaurants.each do |nice_restaurant|%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= nice_restaurant.category.downcase %>&<%= rand(1000) %>)">
+        <%= nice_restaurant.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
