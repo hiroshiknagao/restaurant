@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/nice_restaurants/:id', to: 'nice_restaurants#show', as: :nice_restaurant
   get '/nice_restaurants/:id/edit', to: 'nice_restaurants#edit', as: :edit_nice_restaurant
   patch '/nice_restaurants/:id', to: 'nice_restaurants#update'
+  delete '/nice_restaurants/:id', to: 'nice_restaurants#destroy'
 end

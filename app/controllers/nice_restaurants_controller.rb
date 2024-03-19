@@ -33,6 +33,13 @@ class NiceRestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    @nice_restaurant = NiceRestaurant.find(params[:id])
+    @nice_restaurant.destroy
+    redirect_to nice_restaurant_path, status: :see_other
+
+  end
+
   private
 
   def nice_restaurant_params
