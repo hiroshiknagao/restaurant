@@ -1,0 +1,7 @@
+<div class="container">
+  <h2><%= @nice_restaurant.name %></h2>
+  <p><%= @nice_restaurant.address%></p>
+  <p><%= @nice_restaurant.category%></p>
+  <p><%= '⭐️'* @nice_restaurant.rating%></p>
+  <p><%= link_to "Home", nice_restaurants_path, class: 'btn btn-primary mt-2' %></p>
+</div>

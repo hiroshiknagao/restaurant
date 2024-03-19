@@ -4,6 +4,14 @@ class NiceRestaurantsController < ApplicationController
   end
 
   def show
-    
+    @nice_restaurant = NiceRestaurant.find(params[:id])
+  end
+
+  def new
+    @nice_restaurant = NiceRestaurant.new
+  end
+
+  def create
+    raise
   end
 end

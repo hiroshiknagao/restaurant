@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <h2>Add Nice Restaurant</h2>
+  <%= form_with model: @nice_restaurant do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form_control' %>
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form_control' %>
+    <%= f.label :category %>
+    <%= f.text_field :category, class: 'form_control' %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, class: 'form_control' %>
+    <%= f.submit class: "btn btn-primary mt-2" %>
+  <% end %>
+
+</div>
