@@ -1,5 +1,10 @@
 <div class="container mt-3">
   <h2>Add Nice Restaurant</h2>
+  <% @nice_restaurant.errors.full_messages.each do |message| %>
+    <p class="text-danger"><%= message %></p>
+  <% end %>
+
+
   <%= form_with model: @nice_restaurant do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form_control' %>
