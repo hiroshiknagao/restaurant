@@ -1,0 +1,23 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to nice_restaurants_path, class: "navbar-brand" do %>
+      <i class="fas fa-utensils"></i>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "Nice Restaurants", nice_restaurants_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%#= link_to "Top Nice Restaurants", top_nice_restaurants_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= image_tag "https://i0.wp.com/www.thewrap.com/wp-content/uploads/2024/02/Mark-Ruffalo-as-the-Incredible-Hulk.jpeg?fit=990%2C557&ssl=1", class: "avatar" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

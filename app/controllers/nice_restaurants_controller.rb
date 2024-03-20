@@ -1,4 +1,14 @@
 class NiceRestaurantsController < ApplicationController
+
+  def top
+    @nice_restaurants = NiceRestaurant.where(rating: 5)
+    render :index
+  end
+
+  def chef
+    @nice_restaurant = NiceRestaurant.find(params[:id])
+  end
+
   def index
     @nice_restaurants = NiceRestaurant.all
   end
@@ -36,9 +46,10 @@ class NiceRestaurantsController < ApplicationController
   def destroy
     @nice_restaurant = NiceRestaurant.find(params[:id])
     @nice_restaurant.destroy
-    redirect_to nice_restaurant_path, status: :see_other
-
+    redirect_to nice_restaurants_path, status: :see_other
   end
+
+
 
   private
 
