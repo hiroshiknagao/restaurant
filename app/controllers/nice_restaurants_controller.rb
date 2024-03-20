@@ -7,6 +7,7 @@ class NiceRestaurantsController < ApplicationController
 
   def chef
     @nice_restaurant = NiceRestaurant.find(params[:id])
+    
   end
 
   def index
