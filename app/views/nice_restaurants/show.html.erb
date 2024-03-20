@@ -5,6 +5,12 @@
   <p><%= '⭐️'* @nice_restaurant.rating%></p>
   <p><%= link_to "Home", nice_restaurants_path, class: 'btn btn-primary' %></p>
 </div>
+<h3>Review</h3>
+  <ul>
+    <% @nice_restaurant.reviews.each do |review| %>
+      <li><%= review.content %> - <%= link_to 'x', review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Remove?' } %></li>
+    <% end %>
+  </ul>
 <div class="d-flex">
   <%= link_to edit_nice_restaurant_path(@nice_restaurant), class: 'btn-btn-primary' do %>
     <i class="fa-solid fa-pencil"></i>

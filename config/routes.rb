@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   resources :nice_restaurants do
-    collection do
-      get :top
-    end
-   member do
-  get :chef
+    resources :reviews, only: [:new, :create]
   end
-    # get '/nice_restaurants/id/chef', to: 'nice_restaurants#chef', as: :chef_nice_restaurants
-  end
-
-  
+  resources :reviews, only: [:destroy]
 end
+
+
+# collection do
+  # get :top
+# end
+# member do
+  # get :chef
+# end
